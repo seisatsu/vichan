@@ -1805,6 +1805,8 @@ function mod_deletebyip($boardName, $post, $global = false) {
 		deletePost($post['id'], false, false);
 
 		rebuildThemes('post-delete', $board['uri']);
+		
+		buildIndex();
 
 		buildIndex();
 
